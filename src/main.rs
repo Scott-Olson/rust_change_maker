@@ -32,17 +32,22 @@ fn make_change(amount: f64) -> Coinage {
     println!("input amount: {}", input);
     let mut coins = Coinage::new();
 
+    // remainder is the value of money left after using all the quarters needed.
     let mut remainder = input % 25;
+    // capture the value of quarters needed
     coins.quarters = input / 25;
-
+    // capture the number of dimes needed
     coins.dimes = remainder / 10;
+    // set the remainder value after the dimes
     remainder = remainder % 10;
-
+    // capture the nickels value
     coins.nickels = remainder / 5;
+    // set the remainder
     remainder = remainder % 5;
-
+    // capture the pennies value
     coins.pennies = remainder;
 
+    // return coin: Coinage
     coins
 }
 
