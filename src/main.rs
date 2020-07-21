@@ -67,5 +67,6 @@ fn main() {
     println!("{} will be sorted best into this coinage: ", change);
 
     let coinage = make_change(change);
+    // Need to format this print/return
     println!("{:?}", coinage);
 }
